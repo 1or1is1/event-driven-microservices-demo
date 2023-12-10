@@ -1,6 +1,6 @@
 package com.microservices.demo.twitter.to.kafka.service.runner.impl;
 
-import com.microservices.demo.twitter.to.kafka.service.config.TwitterToKafkaServiceConfigData;
+import com.microservices.demo.config.TwitterToKafkaServiceConfigData;
 import com.microservices.demo.twitter.to.kafka.service.listener.TwitterKafkaStatusListener;
 import com.microservices.demo.twitter.to.kafka.service.runner.StreamRunner;
 import java.time.ZonedDateTime;
@@ -36,7 +36,7 @@ public class MockKafkaStreamRunner implements StreamRunner {
           + "\"user\" : {" + "\"id\" : \"{3}\"" + "}}";
 
   public MockKafkaStreamRunner(TwitterToKafkaServiceConfigData configData,
-      TwitterKafkaStatusListener statusListener) {
+                               TwitterKafkaStatusListener statusListener) {
     this.configData = configData;
     this.statusListener = statusListener;
   }
