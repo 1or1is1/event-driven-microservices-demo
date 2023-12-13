@@ -11,12 +11,13 @@
   </parent>
   <groupId>com.microservices.demo</groupId>
   <artifactId>microservices-demo</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>${revision}${changelist}</version>
   <name>microservices-demo</name>
   <description>Demo Spring Boot Project for Understanding Event Driven Microservices</description>
   <modules>
     <module>twitter-to-kafka-service</module>
     <module>app-config-data</module>
+    <module>kafka</module>
   </modules>
   <packaging>pom</packaging>
   <properties>
@@ -24,6 +25,9 @@
     <spring-boot.version>3.2.0</spring-boot.version>
     <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
     <lombok.version>1.18.30</lombok.version>
+    <avro.version>1.11.1</avro.version>
+    <revision>1.0.0</revision>
+    <changelist>-SNAPSHOT</changelist>
   </properties>
 
   <dependencyManagement>
@@ -53,6 +57,13 @@
         <version>${lombok.version}</version>
         <scope>provided</scope>
       </dependency>
+
+      <dependency>
+        <groupId>org.apache.avro</groupId>
+        <artifactId>avro</artifactId>
+        <version>${avro.version}</version>
+      </dependency>
+
     </dependencies>
   </dependencyManagement>
 
