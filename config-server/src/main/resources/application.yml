@@ -7,16 +7,17 @@ logging:
     org.springframework.cloud.config: debug
 
 spring:
-  profiles:
-    active: native
+#  profiles:
+#    active: native
   application:
     name: configserver
   cloud:
     config:
       server:
-        native:
-          search-locations: file:///D:/PROJECTS/microservices-demo/config-server-repository
-#        git:
-#          uri: file:///D:/PROJECTS/microservices-demo/config-server-repository
-#          clone-on-start: true
+#        native:
+#          search-locations: file:///D:/PROJECTS/microservices-demo/config-server-repository
+        git:
+          uri: https://github.com/1or1is1/spring-cloud-config-server-repository
+          clone-on-start: true
+          default-label: master
       fail-fast: true

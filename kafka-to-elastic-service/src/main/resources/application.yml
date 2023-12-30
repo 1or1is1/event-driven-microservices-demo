@@ -1,13 +1,13 @@
 server:
-  port: 8181
+  port: 8182
 spring:
   config:
     import: configserver:http://localhost:8888
   application:
-    name: twitter-to-kafka-service
+    name: kafka-to-elastic-service
   profiles:
-    active: twitter_to_kafka
+    active: kafka_to_elastic
   cloud:
     config:
-      name: twitter-to-kafka-service,config-client
+      name: kafka-to-elastic-service,config-client
       fail-fast: true
