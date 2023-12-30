@@ -20,6 +20,7 @@
     <module>kafka</module>
     <module>common-config</module>
     <module>config-server</module>
+    <module>kafka-to-elastic-service</module>
   </modules>
   <packaging>pom</packaging>
   <properties>
@@ -27,7 +28,7 @@
     <spring-boot.version>3.2.0</spring-boot.version>
     <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
     <lombok.version>1.18.30</lombok.version>
-    <avro.version>1.11.1</avro.version>
+    <avro.version>1.11.3</avro.version>
     <kafka-avro-serializer.version>7.5.1</kafka-avro-serializer.version>
     <spring-cloud.version>2023.0.0</spring-cloud.version>
     <spring-cloud-config-server.version>4.1.0</spring-cloud-config-server.version>
@@ -63,6 +64,12 @@
       <dependency>
         <groupId>com.microservices.demo</groupId>
         <artifactId>kafka-producer</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.microservices.demo</groupId>
+        <artifactId>kafka-consumer</artifactId>
         <version>${project.version}</version>
       </dependency>
 
