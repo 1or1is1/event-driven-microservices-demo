@@ -15,4 +15,4 @@ services:
       - "KAFKA-CONFIG_SCHEMA-REGISTRY-URL=http://schema-registry:8081"
       - "TWITTER-TO-KAFKA-SERVICE_ENABLE-MOCK-TWEETS=true"
     networks:
-      - ${GLOBAL_NETWORK:-services}
+      - application
