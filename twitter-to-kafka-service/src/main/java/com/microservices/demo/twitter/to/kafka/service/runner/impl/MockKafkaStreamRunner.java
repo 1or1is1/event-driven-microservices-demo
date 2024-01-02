@@ -62,7 +62,8 @@ public class MockKafkaStreamRunner implements StreamRunner {
           statusListener.onStatus(status);
           sleep(sleepTime);
         }
-      } catch (TwitterException e) {
+      }
+      catch (TwitterException e) {
         log.error("Some Error Occurred", e);
       }
     });
@@ -71,7 +72,8 @@ public class MockKafkaStreamRunner implements StreamRunner {
   private static void sleep(long sleepTime) {
     try {
       Thread.sleep(sleepTime);
-    } catch (InterruptedException e) {
+    }
+    catch (InterruptedException e) {
       throw new RuntimeException(e);
     }
   }
@@ -82,8 +84,9 @@ public class MockKafkaStreamRunner implements StreamRunner {
   }
 
   private String getFormattedTwitterStatusText(String randomTweet) {
-    String[] rawJsonTweetParams = new String[]{ZonedDateTime.now().format(
-        DateTimeFormatter.ofPattern("EEE MMM d HH:mm:ss z yyyy", Locale.ENGLISH)),
+    String[] rawJsonTweetParams = new String[]{
+        ZonedDateTime.now().format(
+            DateTimeFormatter.ofPattern("EEE MMM d HH:mm:ss z yyyy", Locale.ENGLISH)),
         String.valueOf(ThreadLocalRandom.current().nextLong(Long.MAX_VALUE)), randomTweet,
         String.valueOf(ThreadLocalRandom.current().nextLong(Long.MAX_VALUE))};
     String tweet = rawJsonTweet;
