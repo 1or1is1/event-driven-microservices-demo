@@ -18,6 +18,6 @@ spring:
 #          search-locations: file:///D:/PROJECTS/microservices-demo/config-server-repository
         git:
           uri: https://github.com/1or1is1/spring-cloud-config-server-repository
-          clone-on-start: true
           default-label: master
+          force-pull: true
       fail-fast: true
