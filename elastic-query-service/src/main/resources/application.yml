@@ -1,0 +1,13 @@
+server:
+  port: 8183
+spring:
+  config:
+    import: configserver:http://localhost:8888
+  application:
+    name: elastic-query-service
+  profiles:
+    active: elastic_query
+  cloud:
+    config:
+      name: elastic-query-service,config-client
+      fail-fast: true
