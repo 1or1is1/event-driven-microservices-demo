@@ -9,7 +9,7 @@ import org.springframework.data.elasticsearch.support.HttpHeaders;
 import org.springframework.lang.NonNull;
 
 @Configuration
-@EnableElasticsearchRepositories(basePackages = "com.microservices.demo.elastic.index.client.repository")
+@EnableElasticsearchRepositories(basePackages = "com.microservices.demo.elastic")
 public class ElasticsearchConfig extends ElasticsearchConfiguration {
 
   private final ElasticConfigData elasticConfigData;
